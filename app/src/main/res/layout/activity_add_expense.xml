@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background_pic"
+    tools:context=".activities.MainActivity">
+
+
+    <TextView
+        android:id="@+id/add_expense_title_TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:text="ADD EXPENSE"
+        android:textAlignment="center"
+        android:layout_marginVertical="30dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:id="@+id/total_home_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@+id/add_expense_title_TextView"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:padding="6dp"
+            app:cardCornerRadius="12dp"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:paddingVertical="60dp"
+                android:background="@color/white"
+                android:padding="12dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <EditText
+                    android:background="@drawable/input_background_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter item you purchased"
+                    android:id="@+id/item_purchased_txt"
+                    android:padding="10dp"
+                    android:layout_marginTop="20dp"/>
+
+                <EditText
+                    android:background="@drawable/input_background_pic"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter item category"
+                    android:id="@+id/purchased_item_category_txt"
+                    android:padding="10dp"
+                    android:layout_marginTop="20dp"/>
+
+                <EditText
+                    android:background="@drawable/input_background_pic"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter the place of purchased"
+                    android:id="@+id/place_of_purchased_txt"
+                    android:padding="10dp"
+                    android:layout_marginTop="20dp"/>
+
+
+                <EditText
+                    android:background="@drawable/input_background_pic"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter amount used"
+                    android:id="@+id/amount_used_in_purchase_txt"
+                    android:padding="10dp"
+                    android:layout_marginTop="20dp"/>
+
+
+                <Button
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:text="Add Expense"
+                    android:backgroundTint="@color/primaryGreen"
+                    android:id="@+id/add_expense_button"/>
+
+                <TextView
+                    android:id="@+id/add_expense_errorTxtView"
+                    android:visibility="invisible"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryGreen"
+                    android:text="Expense added successfully!"/>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background_pic"
+    tools:context=".activities.ViewExpensesActivity">
+
+    <LinearLayout
+        android:id="@+id/view_expenses_top_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/view_expenses_back_ImageView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/arrow_back_icon_foreground" />
+
+        <TextView
+            android:layout_marginRight="50dp"
+            android:layout_weight="4"
+            android:id="@+id/view_expense_title_TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:text="YOUR EXPENSES"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/view_expense_total_TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_expenses_top_linear"
+        android:layout_marginTop="10dp"
+        android:text="Total Spent: KSh 4500.00"
+        android:textAlignment="center"
+        android:textColor="#5A120D"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/view_expense_total_TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/view_expenses_listView"/>
+
+</RelativeLayout>
